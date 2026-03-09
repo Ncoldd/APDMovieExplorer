@@ -25,6 +25,11 @@ https://apd-movie-explorer.vercel.app/
 ![Details](./screenshots/details.png)
 ![Favorites](./screenshots/favorites.png)
 
+### Updated Screenshots
+![Home2](./screenshots/home2.png)
+![Login](./screenshots/login.png)
+![Results2](./screenshots/results2.png)
+
 
 ## Known Issues / Future Improvements
 - Improve styling (further)
