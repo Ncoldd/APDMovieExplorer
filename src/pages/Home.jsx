@@ -19,10 +19,27 @@ export default function Home() {
 
   return (
     <div className ="container">
-        <div>
-            <form onSubmit={handleSearch}>
-                <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search movies..." />
-                <button type="submit">Search</button>
+        <div className="horizontal-div">
+            <form className="form"
+             onSubmit={handleSearch}>
+              <div className="searchBoxInput">
+                <input className="searchInput" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search movies..." />
+              </div>
+              <button type="submit" className="searchButton">
+                  <div style={{ width: "100%", height: "100%", display: "block", fill: "currentColor" }}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      focusable="false"
+                      aria-hidden="true"
+                      style={{ pointerEvents: "none", display: "inherit", width: "100%", height: "100%" }}
+                    >
+                      <path d="M11 2a9 9 0 105.641 16.01.966.966 0 00.152.197l3.5 3.5a1 1 0 101.414-1.414l-3.5-3.5a1 1 0 00-.197-.153A8.96 8.96 0 0020 11a9 9 0 00-9-9Zm0 2a7 7 0 110 14 7 7 0 010-14Z"></path>
+                    </svg>
+                  </div>
+              </button>
             </form>
         </div>
 

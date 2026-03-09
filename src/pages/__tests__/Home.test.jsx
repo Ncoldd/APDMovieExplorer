@@ -7,8 +7,8 @@ test('renders search input', () => {
   expect(input).toBeInTheDocument();
 });
 
-test('renders search button', () => {
+test("renders search button", () => {
   render(<Home />);
-  const button = screen.getByRole('button', { name: /search/i });
+  const button = screen.getByRole("button");
   expect(button).toBeInTheDocument();
 });

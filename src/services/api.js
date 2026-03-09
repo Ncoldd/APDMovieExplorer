@@ -10,7 +10,6 @@ const api = axios.create({
     }
 });
 
-console.log("API KEY:", import.meta.env.VITE_TMDB_API_KEY);
 
 export const searchMovies = async (query) => {
     const res = await api.get("/search/movie", { params: { query } });

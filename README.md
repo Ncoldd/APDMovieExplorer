@@ -1,16 +1,55 @@
-# React + Vite
+## Description
+A React app that lets users search for movies and view details using the TMDb API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Used
+- React
+- Vite
+- TMDb API
+- Context API
 
-Currently, two official plugins are available:
+## Setup
+```npm install``` 
+```npm run dev``` 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Search movies
+- View details
+- Add/remove favorites
 
-## React Compiler
+## Deployment
+https://apd-movie-explorer.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
+![Home](./screenshots/home.png)
+![Results](./screenshots/results.png)
+![Details](./screenshots/details.png)
+![Favorites](./screenshots/favorites.png)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Known Issues / Future Improvements
+- Improve styling (further)
+- Improve login form styling
+- Update Profile page/remove placeholder
+- Add logout confirmation
+- Automatically showcase movies on home page 
+- A non-user can add movies to favorites and see them when logged in.
+
+## Security Implementation
+- React automatically escapes user input to prevent XSS attacks.
+- Authentication tokens are stored in localStorage and managed through React Context.
+- Protected routes prevent unauthorized access to user features.
+- Environment variables are used to protect API keys in production.
+
+## Authentication & API Usage
+
+### Authentication Flow
+This app uses a simple React Context-based authentication system.
+
+**Login Example:**
+```javascript```
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+
+const { login } = useContext(AuthContext);
+
+login({ username: "user", password: "user123" });

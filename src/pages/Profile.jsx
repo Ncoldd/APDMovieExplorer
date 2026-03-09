@@ -4,10 +4,13 @@ export default function Profile() {
                 style={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                gap: '100px'
                 }}
             >
-            My profile page
+            <h4>My profile page</h4>
+            <img src="/imageC.png" alt="" width="400" height="300"></img>
+
             </div>
           );
 }
